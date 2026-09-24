@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +8,6 @@
 <title>Happy Birthday Bestie 💗</title>
 
 <style>
-
-/* =========================
-   BASIC
-========================= */
 
 *{
     margin:0;
@@ -29,10 +25,6 @@ body{
     background:#fff0f7;
     color:#64204b;
 }
-
-/* =========================
-   BACKGROUND
-========================= */
 
 .hero{
     min-height:100vh;
@@ -111,9 +103,7 @@ body{
     transform:scale(1.1);
 }
 
-/* =========================
-   BALLOONS
-========================= */
+/* BALLOONS */
 
 .balloon{
     position:absolute;
@@ -178,9 +168,7 @@ body{
     }
 }
 
-/* =========================
-   HEARTS
-========================= */
+/* HEARTS */
 
 .heart{
     position:fixed;
@@ -198,9 +186,7 @@ body{
     }
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 section{
     min-height:100vh;
@@ -224,15 +210,12 @@ section{
     margin-bottom:35px;
 }
 
-/* =========================
-   MESSAGE CARD
-========================= */
+/* MESSAGE CARD */
 
 .message-card{
     max-width:750px;
     padding:45px;
     border-radius:35px;
-
     background:rgba(255,255,255,.75);
 
     box-shadow:
@@ -261,15 +244,12 @@ section{
     font-size:1.1rem;
 }
 
-/* =========================
-   BALLOON GAME
-========================= */
+/* BALLOON GAME */
 
 .balloon-game{
     width:100%;
     max-width:900px;
     min-height:400px;
-
     position:relative;
 
     border-radius:35px;
@@ -282,7 +262,6 @@ section{
     );
 
     box-shadow:0 20px 60px #bd79b333;
-
     overflow:hidden;
 }
 
@@ -325,9 +304,11 @@ section{
         transform:scale(1);
         opacity:1;
     }
+
     50%{
         transform:scale(1.5);
     }
+
     100%{
         transform:scale(0);
         opacity:0;
@@ -370,15 +351,14 @@ section{
         opacity:0;
         transform:scale(.7);
     }
+
     to{
         opacity:1;
         transform:scale(1);
     }
 }
 
-/* =========================
-   MEMORIES
-========================= */
+/* MEMORIES */
 
 .memory-section{
     background:
@@ -419,11 +399,15 @@ section{
     box-shadow:0 25px 50px #a65d8b55;
 }
 
+/* ⭐ IMAGE SIZE UPDATED ⭐ */
+
 .memory img{
     width:100%;
-    height:250px;
-    object-fit:cover;
+    height:380px;
+    object-fit:contain;
+    background:#fff5fa;
     border-radius:8px;
+    display:block;
 }
 
 .memory p{
@@ -433,9 +417,7 @@ section{
     font-size:1.1rem;
 }
 
-/* =========================
-   CAKE
-========================= */
+/* CAKE */
 
 .cake-section{
     background:linear-gradient(#fff0f8,#f0e5ff);
@@ -447,8 +429,6 @@ section{
     height:260px;
     margin:40px auto;
 }
-
-/* cake layers */
 
 .cake-bottom{
     position:absolute;
@@ -491,8 +471,6 @@ section{
     border-radius:50%;
 }
 
-/* candles */
-
 .candle{
     position:absolute;
     bottom:190px;
@@ -516,8 +494,7 @@ section{
 
     background:#ffbd42;
 
-    border-radius:
-        50% 50% 50% 50%;
+    border-radius:50%;
 
     animation:flame 0.5s infinite alternate;
 }
@@ -526,6 +503,7 @@ section{
     from{
         transform:scale(.8) rotate(-5deg);
     }
+
     to{
         transform:scale(1.1) rotate(5deg);
     }
@@ -537,9 +515,7 @@ section{
     font-size:1.4rem;
 }
 
-/* =========================
-   GIFT
-========================= */
+/* GIFT */
 
 .gift-section{
     background:
@@ -618,9 +594,7 @@ section{
     line-height:2;
 }
 
-/* =========================
-   CONFETTI
-========================= */
+/* CONFETTI */
 
 .confetti{
     position:fixed;
@@ -641,9 +615,7 @@ section{
     }
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     padding:30px;
@@ -652,9 +624,7 @@ footer{
     text-align:center;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:600px){
 
@@ -671,29 +641,25 @@ footer{
         font-size:2.3rem;
     }
 
+    /* Mobile par bhi image bari aur full visible */
+
     .memory img{
-        height:220px;
+        height:330px;
+        object-fit:contain;
     }
 
     .balloon-game{
         min-height:500px;
     }
+
 }
 
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     HERO
-========================= -->
-
 <section class="hero">
-
-    <!-- decorative balloons -->
 
     <div class="balloon b1"></div>
     <div class="balloon b2"></div>
@@ -723,543 +689,4 @@ footer{
 
 </section>
 
-
-<!-- =========================
-     MESSAGE
-========================= -->
-
-<section>
-
-    <h2 class="section-title">
-        A Little Message For You 💌
-    </h2>
-
-    <div class="message-card">
-
-        <h3>To My Special Friend 🌸</h3>
-
-        <p>
-
-            Some people enter our lives and somehow
-            make everything a little brighter. 🥹💗
-
-            <br><br>
-
-            Thank you for all the laughs,
-            random conversations,
-            crazy moments and beautiful memories.
-
-            <br><br>
-
-            I hope this new year of your life brings
-            you happiness, peace, success and
-            countless reasons to smile. ✨
-
-            <br><br>
-
-            Stay exactly the way you are...
-            because you're pretty amazing. 🌷
-
-            <br><br>
-
-            <b>Happy Birthday once again! 🎂💖</b>
-
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     POP BALLOONS
-========================= -->
-
-<section>
-
-    <h2 class="section-title">
-        Pop The Balloons! 🎈
-    </h2>
-
-    <p class="subtitle">
-        Click every balloon to discover your surprise 💗
-    </p>
-
-    <div class="balloon-game" id="game">
-
-        <div class="game-balloon"
-             style="left:8%;top:30%;background:#ff77b7"
-             onclick="popBalloon(this)">
-        </div>
-
-        <div class="game-balloon"
-             style="left:25%;top:55%;background:#9c83ff"
-             onclick="popBalloon(this)">
-        </div>
-
-        <div class="game-balloon"
-             style="left:43%;top:25%;background:#ffad72"
-             onclick="popBalloon(this)">
-        </div>
-
-        <div class="game-balloon"
-             style="left:60%;top:55%;background:#6fc8ff"
-             onclick="popBalloon(this)">
-        </div>
-
-        <div class="game-balloon"
-             style="left:78%;top:30%;background:#ff6b9f"
-             onclick="popBalloon(this)">
-        </div>
-
-
-        <div class="surprise-text" id="balloonSurprise">
-
-            <h2>🎉 SURPRISE! 🎉</h2>
-
-            <p>
-                You're officially
-                <b>too special</b>
-                for ordinary birthdays! 💗
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     MEMORIES
-========================= -->
-
-<section class="memory-section">
-
-    <h2 class="section-title">
-        Our Little Memories 📸
-    </h2>
-
-    <p class="subtitle">
-        Some moments I'll always keep close to my heart 💕
-    </p>
-
-    <div class="memories">
-
-        <!-- CHANGE THESE PHOTOS -->
-
-        <div class="memory">
-
-            <img src="img1.jpeg">
-
-            <p>
-                Our silly moments 😂💗
-            </p>
-
-        </div>
-
-
-        <div class="memory">
-
-            <img src="img2.jpeg">
-
-            <p>
-                Always better together 🌸
-            </p>
-
-        </div>
-
-
-        <div class="memory">
-
-            <img src="img3.jpeg">
-
-            <p>
-                One of my favorite memories 🥹
-            </p>
-
-        </div>
-
-
-        <div class="memory">
-
-            <img src="img6.jpeg">
-
-            <p>
-                More adventures coming ✨
-            </p>
-
-        </div>
-
-
-        <div class="memory">
-
-            <img src="img8.jpeg">
-
-            <p>
-                Forever our chaos 😂💕
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CAKE
-========================= -->
-
-<section class="cake-section">
-
-    <h2 class="section-title">
-        Make A Wish 🎂✨
-    </h2>
-
-    <p class="subtitle">
-        Close your eyes... and make your birthday wish 🌙
-    </p>
-
-
-    <div class="cake">
-
-        <div class="cake-bottom"></div>
-
-        <div class="cake-middle"></div>
-
-        <div class="cake-top"></div>
-
-        <div class="cream"></div>
-
-
-        <div class="candle c1">
-            <div class="flame"></div>
-        </div>
-
-        <div class="candle c2">
-            <div class="flame"></div>
-        </div>
-
-        <div class="candle c3">
-            <div class="flame"></div>
-        </div>
-
-    </div>
-
-
-    <p class="cake-text">
-        🎂 A cake made especially for you 💗
-    </p>
-
-</section>
-
-
-<!-- =========================
-     FINAL GIFT
-========================= -->
-
-<section class="gift-section">
-
-    <h2 class="section-title"
-        style="color:#ff9bce;">
-
-        One Last Surprise 🎁
-
-    </h2>
-
-    <p>
-        There's something waiting for you...
-    </p>
-
-
-    <div class="gift"
-         onclick="openGift()">
-
-        <div class="bow">
-            🎀
-        </div>
-
-        <div class="gift-lid"></div>
-
-        <div class="gift-box"></div>
-
-        <div class="ribbon"></div>
-
-    </div>
-
-
-    <p>
-        👆 Click the gift
-    </p>
-
-
-    <div class="final-message"
-         id="finalMessage">
-
-        <h2>
-            You Are Loved 💗
-        </h2>
-
-        <p>
-
-            I hope you always remember...
-
-            <br><br>
-
-            You are beautiful.
-            <br>
-            You are strong.
-            <br>
-            You are enough.
-            <br>
-            And you deserve so many happy moments. 🌷
-
-            <br><br>
-
-            Keep smiling,
-            keep shining,
-            and never stop being YOU. ✨
-
-            <br><br>
-
-            <b>
-                HAPPY BIRTHDAY ASMA 🎂🎉💗
-            </b>
-
-        </p>
-
-    </div>
-
-</section>
-
-
-<footer>
-
-    Made with lots of 💗 & ✨
-    <br>
-    Especially for my bestie 🌸
-
-</footer>
-
-
-
-<script>
-
-/* =========================
-   START SURPRISE
-========================= */
-
-function startSurprise(){
-
-    createConfetti();
-
-    for(let i=0;i<20;i++){
-
-        setTimeout(
-            createHeart,
-            i * 100
-        );
-
-    }
-
-    setTimeout(()=>{
-
-        document.querySelector("section:nth-of-type(2)")
-        .scrollIntoView({
-            behavior:"smooth"
-        });
-
-    },500);
-
-}
-
-
-/* =========================
-   POP BALLOON
-========================= */
-
-let popped = 0;
-
-function popBalloon(balloon){
-
-    balloon.classList.add("pop");
-
-    popped++;
-
-    createMiniConfetti(
-        balloon.getBoundingClientRect()
-    );
-
-    createHeart();
-
-    if(popped === 5){
-
-        setTimeout(()=>{
-
-            document
-            .getElementById("balloonSurprise")
-            .classList.add("show");
-
-            createConfetti();
-
-        },400);
-
-    }
-
-}
-
-
-/* =========================
-   MINI CONFETTI
-========================= */
-
-function createMiniConfetti(rect){
-
-    for(let i=0;i<15;i++){
-
-        const c =
-            document.createElement("div");
-
-        c.className="confetti";
-
-        c.style.left =
-            rect.left + "px";
-
-        c.style.top =
-            rect.top + "px";
-
-        c.style.background =
-            `hsl(${Math.random()*360},90%,70%)`;
-
-        document.body.appendChild(c);
-
-        setTimeout(()=>{
-            c.remove();
-        },4000);
-
-    }
-
-}
-
-
-/* =========================
-   BIG CONFETTI
-========================= */
-
-function createConfetti(){
-
-    for(let i=0;i<120;i++){
-
-        const c =
-            document.createElement("div");
-
-        c.className="confetti";
-
-        c.style.left =
-            Math.random()*100 + "vw";
-
-        c.style.background =
-            `hsl(${Math.random()*360},85%,70%)`;
-
-        c.style.animationDuration =
-            (2 + Math.random()*3) + "s";
-
-        c.style.animationDelay =
-            Math.random() + "s";
-
-        document.body.appendChild(c);
-
-        setTimeout(()=>{
-            c.remove();
-        },6000);
-
-    }
-
-}
-
-
-/* =========================
-   FLOATING HEARTS
-========================= */
-
-function createHeart(){
-
-    const heart =
-        document.createElement("div");
-
-    heart.className="heart";
-
-    const list=[
-        "💗",
-        "💖",
-        "💕",
-        "💓",
-        "💞",
-        "🌸",
-        "✨"
-    ];
-
-    heart.innerHTML =
-        list[
-            Math.floor(
-                Math.random()*list.length
-            )
-        ];
-
-    heart.style.left =
-        Math.random()*100 + "vw";
-
-    heart.style.animationDuration =
-        (3 + Math.random()*3) + "s";
-
-    document.body.appendChild(heart);
-
-    setTimeout(()=>{
-        heart.remove();
-    },6000);
-
-}
-
-
-/* =========================
-   GIFT
-========================= */
-
-function openGift(){
-
-    const message =
-        document.getElementById(
-            "finalMessage"
-        );
-
-    message.classList.add("show");
-
-    createConfetti();
-
-    for(let i=0;i<40;i++){
-
-        setTimeout(
-            createHeart,
-            i*70
-        );
-
-    }
-
-}
-
-
-/* =========================
-   CONTINUOUS HEARTS
-========================= */
-
-setInterval(
-    createHeart,
-    1800
-);
-
-</script>
-
-</body>
-</html>
-```
+<
