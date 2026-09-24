@@ -1,0 +1,1265 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Bestie 💗</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI", sans-serif;
+    overflow-x:hidden;
+    background:#fff0f7;
+    color:#64204b;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffd0e7, transparent 30%),
+        radial-gradient(circle at 80% 20%, #d9c8ff, transparent 30%),
+        linear-gradient(135deg,#ffe5f2,#eee3ff);
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+    animation:heroIn 1.5s ease;
+}
+
+@keyframes heroIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero h1{
+    font-size:clamp(3rem,9vw,7rem);
+    font-family:cursive;
+    color:#ff4fa3;
+    text-shadow:
+        0 5px 0 white,
+        0 0 25px #ff91c7;
+    animation:titleFloat 3s ease-in-out infinite;
+}
+
+@keyframes titleFloat{
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.hero h2{
+    font-size:clamp(1.3rem,4vw,2rem);
+    color:#7b55b5;
+    margin:10px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    margin:20px auto;
+    max-width:600px;
+    color:#74395e;
+}
+
+.start-btn{
+    border:none;
+    padding:16px 35px;
+    border-radius:50px;
+    background:linear-gradient(90deg,#ff4fa3,#a66cff);
+    color:white;
+    font-size:1.1rem;
+    cursor:pointer;
+    box-shadow:0 10px 30px #ff6bb477;
+    transition:.3s;
+}
+
+.start-btn:hover{
+    transform:scale(1.1);
+}
+
+/* =========================
+   BALLOONS
+========================= */
+
+.balloon{
+    position:absolute;
+    width:70px;
+    height:90px;
+    border-radius:50%;
+    animation:balloonFloat 4s ease-in-out infinite;
+    z-index:2;
+}
+
+.balloon::after{
+    content:"";
+    position:absolute;
+    bottom:-35px;
+    left:50%;
+    width:2px;
+    height:40px;
+    background:#8e6b7c;
+}
+
+.balloon::before{
+    content:"";
+    position:absolute;
+    bottom:-7px;
+    left:50%;
+    transform:translateX(-50%);
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-top:10px solid #ff6fae;
+}
+
+.b1{
+    left:5%;
+    top:15%;
+    background:#ff80b9;
+}
+
+.b2{
+    right:7%;
+    top:18%;
+    background:#9f83ff;
+    animation-delay:1s;
+}
+
+.b3{
+    left:15%;
+    bottom:15%;
+    background:#ffb36b;
+    animation-delay:2s;
+}
+
+.b4{
+    right:15%;
+    bottom:12%;
+    background:#73c9ff;
+    animation-delay:.5s;
+}
+
+@keyframes balloonFloat{
+    50%{
+        transform:translateY(-25px) rotate(4deg);
+    }
+}
+
+/* =========================
+   HEARTS
+========================= */
+
+.heart{
+    position:fixed;
+    bottom:-40px;
+    font-size:25px;
+    pointer-events:none;
+    z-index:100;
+    animation:heartUp 5s linear forwards;
+}
+
+@keyframes heartUp{
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    min-height:100vh;
+    padding:80px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.section-title{
+    font-family:cursive;
+    font-size:3rem;
+    color:#e83f91;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    color:#79516d;
+    margin-bottom:35px;
+}
+
+/* =========================
+   MESSAGE CARD
+========================= */
+
+.message-card{
+    max-width:750px;
+    padding:45px;
+    border-radius:35px;
+
+    background:rgba(255,255,255,.75);
+
+    box-shadow:
+        0 20px 60px rgba(190,90,150,.18);
+
+    border:2px solid white;
+
+    animation:cardFloat 4s ease-in-out infinite;
+}
+
+@keyframes cardFloat{
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+.message-card h3{
+    font-family:cursive;
+    font-size:2rem;
+    color:#f0529e;
+    margin-bottom:20px;
+}
+
+.message-card p{
+    line-height:2;
+    font-size:1.1rem;
+}
+
+/* =========================
+   BALLOON GAME
+========================= */
+
+.balloon-game{
+    width:100%;
+    max-width:900px;
+    min-height:400px;
+
+    position:relative;
+
+    border-radius:35px;
+    padding:40px;
+
+    background:linear-gradient(
+        135deg,
+        #fff7fc,
+        #eee7ff
+    );
+
+    box-shadow:0 20px 60px #bd79b333;
+
+    overflow:hidden;
+}
+
+.game-balloon{
+    position:absolute;
+    width:70px;
+    height:90px;
+    border-radius:50%;
+    cursor:pointer;
+    animation:gameFloat 3s ease-in-out infinite;
+    transition:.2s;
+}
+
+.game-balloon:hover{
+    transform:scale(1.15);
+}
+
+.game-balloon::after{
+    content:"";
+    position:absolute;
+    bottom:-40px;
+    left:50%;
+    width:2px;
+    height:45px;
+    background:#777;
+}
+
+@keyframes gameFloat{
+    50%{
+        transform:translateY(-25px);
+    }
+}
+
+.pop{
+    animation:pop .35s forwards !important;
+}
+
+@keyframes pop{
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+    50%{
+        transform:scale(1.5);
+    }
+    100%{
+        transform:scale(0);
+        opacity:0;
+    }
+}
+
+.surprise-text{
+    display:none;
+    position:absolute;
+    inset:0;
+
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    background:rgba(255,255,255,.9);
+
+    z-index:10;
+
+    animation:appear .7s;
+}
+
+.surprise-text.show{
+    display:flex;
+}
+
+.surprise-text h2{
+    font-family:cursive;
+    font-size:3rem;
+    color:#f04d9b;
+}
+
+.surprise-text p{
+    font-size:1.3rem;
+    margin-top:15px;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:scale(.7);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memory-section{
+    background:
+        radial-gradient(circle at top,#f8d8ff,#fff0f7);
+}
+
+.memories{
+    width:100%;
+    max-width:1100px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+
+    gap:25px;
+}
+
+.memory{
+    background:white;
+    padding:12px;
+    border-radius:12px;
+
+    box-shadow:0 15px 35px #a65d8b33;
+
+    transform:rotate(-2deg);
+    transition:.4s;
+}
+
+.memory:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.memory:hover{
+    transform:
+        translateY(-15px)
+        rotate(0deg)
+        scale(1.05);
+
+    box-shadow:0 25px 50px #a65d8b55;
+}
+
+.memory img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.memory p{
+    font-family:cursive;
+    color:#a63b77;
+    padding:12px 5px 5px;
+    font-size:1.1rem;
+}
+
+/* =========================
+   CAKE
+========================= */
+
+.cake-section{
+    background:linear-gradient(#fff0f8,#f0e5ff);
+}
+
+.cake{
+    position:relative;
+    width:280px;
+    height:260px;
+    margin:40px auto;
+}
+
+/* cake layers */
+
+.cake-bottom{
+    position:absolute;
+    bottom:0;
+    left:10px;
+    width:260px;
+    height:80px;
+    background:linear-gradient(#ff9dca,#f35b9d);
+    border-radius:20px 20px 30px 30px;
+    box-shadow:0 10px 0 #d74386;
+}
+
+.cake-middle{
+    position:absolute;
+    bottom:65px;
+    left:35px;
+    width:210px;
+    height:70px;
+    background:linear-gradient(#ffc1df,#ff82bb);
+    border-radius:20px;
+}
+
+.cake-top{
+    position:absolute;
+    bottom:120px;
+    left:60px;
+    width:160px;
+    height:65px;
+    background:linear-gradient(#fff,#ffc4e2);
+    border-radius:25px;
+}
+
+.cream{
+    position:absolute;
+    bottom:170px;
+    left:55px;
+    width:170px;
+    height:30px;
+    background:white;
+    border-radius:50%;
+}
+
+/* candles */
+
+.candle{
+    position:absolute;
+    bottom:190px;
+    width:12px;
+    height:50px;
+    background:#a879ff;
+    border-radius:5px;
+}
+
+.c1{left:80px;}
+.c2{left:135px;}
+.c3{left:190px;}
+
+.flame{
+    position:absolute;
+    top:-25px;
+    left:-4px;
+
+    width:20px;
+    height:27px;
+
+    background:#ffbd42;
+
+    border-radius:
+        50% 50% 50% 50%;
+
+    animation:flame 0.5s infinite alternate;
+}
+
+@keyframes flame{
+    from{
+        transform:scale(.8) rotate(-5deg);
+    }
+    to{
+        transform:scale(1.1) rotate(5deg);
+    }
+}
+
+.cake-text{
+    font-family:cursive;
+    color:#e84d99;
+    font-size:1.4rem;
+}
+
+/* =========================
+   GIFT
+========================= */
+
+.gift-section{
+    background:
+        radial-gradient(circle at 50% 50%,#4c286d,#160d2e);
+
+    color:white;
+}
+
+.gift{
+    position:relative;
+    width:190px;
+    height:160px;
+    margin:40px auto;
+    cursor:pointer;
+    transition:.5s;
+}
+
+.gift:hover{
+    transform:scale(1.1) rotate(-3deg);
+}
+
+.gift-box{
+    position:absolute;
+    bottom:0;
+    width:190px;
+    height:120px;
+    background:linear-gradient(135deg,#ff5ca8,#9c64ff);
+    border-radius:12px;
+}
+
+.gift-lid{
+    position:absolute;
+    top:15px;
+    left:-10px;
+    width:210px;
+    height:40px;
+    background:#ff80bd;
+    border-radius:10px;
+}
+
+.ribbon{
+    position:absolute;
+    left:80px;
+    top:15px;
+    width:30px;
+    height:145px;
+    background:#ffe1ef;
+}
+
+.bow{
+    position:absolute;
+    top:-25px;
+    left:65px;
+    font-size:65px;
+}
+
+.final-message{
+    display:none;
+    max-width:650px;
+    animation:appear 1s;
+}
+
+.final-message.show{
+    display:block;
+}
+
+.final-message h2{
+    font-family:cursive;
+    font-size:3rem;
+    color:#ff8dc7;
+    margin-bottom:20px;
+}
+
+.final-message p{
+    font-size:1.2rem;
+    line-height:2;
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+    position:fixed;
+    top:-20px;
+    width:10px;
+    height:15px;
+    z-index:999;
+    animation:confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall{
+    to{
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity:0;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:30px;
+    background:#170d2b;
+    color:#ffc4e3;
+    text-align:center;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .message-card{
+        padding:25px;
+    }
+
+    .balloon{
+        width:50px;
+        height:65px;
+    }
+
+    .section-title{
+        font-size:2.3rem;
+    }
+
+    .memory img{
+        height:220px;
+    }
+
+    .balloon-game{
+        min-height:500px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <!-- decorative balloons -->
+
+    <div class="balloon b1"></div>
+    <div class="balloon b2"></div>
+    <div class="balloon b3"></div>
+    <div class="balloon b4"></div>
+
+    <div class="hero-content">
+
+        <h1>Happy Birthday 🎂</h1>
+
+        <h2>My Beautiful Bestie 💗</h2>
+
+        <p>
+            Today is all about YOU ✨
+            <br>
+            So I made you a little surprise...
+        </p>
+
+        <button class="start-btn"
+                onclick="startSurprise()">
+
+            🎀 Open Your Surprise 🎀
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        A Little Message For You 💌
+    </h2>
+
+    <div class="message-card">
+
+        <h3>To My Special Friend 🌸</h3>
+
+        <p>
+
+            Some people enter our lives and somehow
+            make everything a little brighter. 🥹💗
+
+            <br><br>
+
+            Thank you for all the laughs,
+            random conversations,
+            crazy moments and beautiful memories.
+
+            <br><br>
+
+            I hope this new year of your life brings
+            you happiness, peace, success and
+            countless reasons to smile. ✨
+
+            <br><br>
+
+            Stay exactly the way you are...
+            because you're pretty amazing. 🌷
+
+            <br><br>
+
+            <b>Happy Birthday once again! 🎂💖</b>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POP BALLOONS
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Pop The Balloons! 🎈
+    </h2>
+
+    <p class="subtitle">
+        Click every balloon to discover your surprise 💗
+    </p>
+
+    <div class="balloon-game" id="game">
+
+        <div class="game-balloon"
+             style="left:8%;top:30%;background:#ff77b7"
+             onclick="popBalloon(this)">
+        </div>
+
+        <div class="game-balloon"
+             style="left:25%;top:55%;background:#9c83ff"
+             onclick="popBalloon(this)">
+        </div>
+
+        <div class="game-balloon"
+             style="left:43%;top:25%;background:#ffad72"
+             onclick="popBalloon(this)">
+        </div>
+
+        <div class="game-balloon"
+             style="left:60%;top:55%;background:#6fc8ff"
+             onclick="popBalloon(this)">
+        </div>
+
+        <div class="game-balloon"
+             style="left:78%;top:30%;background:#ff6b9f"
+             onclick="popBalloon(this)">
+        </div>
+
+
+        <div class="surprise-text" id="balloonSurprise">
+
+            <h2>🎉 SURPRISE! 🎉</h2>
+
+            <p>
+                You're officially
+                <b>too special</b>
+                for ordinary birthdays! 💗
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section class="memory-section">
+
+    <h2 class="section-title">
+        Our Little Memories 📸
+    </h2>
+
+    <p class="subtitle">
+        Some moments I'll always keep close to my heart 💕
+    </p>
+
+    <div class="memories">
+
+        <!-- CHANGE THESE PHOTOS -->
+
+        <div class="memory">
+
+            <img src="img1.jpeg">
+
+            <p>
+                Our silly moments 😂💗
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="img2.jpeg">
+
+            <p>
+                Always better together 🌸
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="img3.jpeg">
+
+            <p>
+                One of my favorite memories 🥹
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="img6.jpeg">
+
+            <p>
+                More adventures coming ✨
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="img7.jpeg">
+
+            <p>
+                Forever our chaos 😂💕
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CAKE
+========================= -->
+
+<section class="cake-section">
+
+    <h2 class="section-title">
+        Make A Wish 🎂✨
+    </h2>
+
+    <p class="subtitle">
+        Close your eyes... and make your birthday wish 🌙
+    </p>
+
+
+    <div class="cake">
+
+        <div class="cake-bottom"></div>
+
+        <div class="cake-middle"></div>
+
+        <div class="cake-top"></div>
+
+        <div class="cream"></div>
+
+
+        <div class="candle c1">
+            <div class="flame"></div>
+        </div>
+
+        <div class="candle c2">
+            <div class="flame"></div>
+        </div>
+
+        <div class="candle c3">
+            <div class="flame"></div>
+        </div>
+
+    </div>
+
+
+    <p class="cake-text">
+        🎂 A cake made especially for you 💗
+    </p>
+
+</section>
+
+
+<!-- =========================
+     FINAL GIFT
+========================= -->
+
+<section class="gift-section">
+
+    <h2 class="section-title"
+        style="color:#ff9bce;">
+
+        One Last Surprise 🎁
+
+    </h2>
+
+    <p>
+        There's something waiting for you...
+    </p>
+
+
+    <div class="gift"
+         onclick="openGift()">
+
+        <div class="bow">
+            🎀
+        </div>
+
+        <div class="gift-lid"></div>
+
+        <div class="gift-box"></div>
+
+        <div class="ribbon"></div>
+
+    </div>
+
+
+    <p>
+        👆 Click the gift
+    </p>
+
+
+    <div class="final-message"
+         id="finalMessage">
+
+        <h2>
+            You Are Loved 💗
+        </h2>
+
+        <p>
+
+            I hope you always remember...
+
+            <br><br>
+
+            You are beautiful.
+            <br>
+            You are strong.
+            <br>
+            You are enough.
+            <br>
+            And you deserve so many happy moments. 🌷
+
+            <br><br>
+
+            Keep smiling,
+            keep shining,
+            and never stop being YOU. ✨
+
+            <br><br>
+
+            <b>
+                HAPPY BIRTHDAY ASMA 🎂🎉💗
+            </b>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with lots of 💗 & ✨
+    <br>
+    Especially for my bestie 🌸
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   START SURPRISE
+========================= */
+
+function startSurprise(){
+
+    createConfetti();
+
+    for(let i=0;i<20;i++){
+
+        setTimeout(
+            createHeart,
+            i * 100
+        );
+
+    }
+
+    setTimeout(()=>{
+
+        document.querySelector("section:nth-of-type(2)")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+    },500);
+
+}
+
+
+/* =========================
+   POP BALLOON
+========================= */
+
+let popped = 0;
+
+function popBalloon(balloon){
+
+    balloon.classList.add("pop");
+
+    popped++;
+
+    createMiniConfetti(
+        balloon.getBoundingClientRect()
+    );
+
+    createHeart();
+
+    if(popped === 5){
+
+        setTimeout(()=>{
+
+            document
+            .getElementById("balloonSurprise")
+            .classList.add("show");
+
+            createConfetti();
+
+        },400);
+
+    }
+
+}
+
+
+/* =========================
+   MINI CONFETTI
+========================= */
+
+function createMiniConfetti(rect){
+
+    for(let i=0;i<15;i++){
+
+        const c =
+            document.createElement("div");
+
+        c.className="confetti";
+
+        c.style.left =
+            rect.left + "px";
+
+        c.style.top =
+            rect.top + "px";
+
+        c.style.background =
+            `hsl(${Math.random()*360},90%,70%)`;
+
+        document.body.appendChild(c);
+
+        setTimeout(()=>{
+            c.remove();
+        },4000);
+
+    }
+
+}
+
+
+/* =========================
+   BIG CONFETTI
+========================= */
+
+function createConfetti(){
+
+    for(let i=0;i<120;i++){
+
+        const c =
+            document.createElement("div");
+
+        c.className="confetti";
+
+        c.style.left =
+            Math.random()*100 + "vw";
+
+        c.style.background =
+            `hsl(${Math.random()*360},85%,70%)`;
+
+        c.style.animationDuration =
+            (2 + Math.random()*3) + "s";
+
+        c.style.animationDelay =
+            Math.random() + "s";
+
+        document.body.appendChild(c);
+
+        setTimeout(()=>{
+            c.remove();
+        },6000);
+
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className="heart";
+
+    const list=[
+        "💗",
+        "💖",
+        "💕",
+        "💓",
+        "💞",
+        "🌸",
+        "✨"
+    ];
+
+    heart.innerHTML =
+        list[
+            Math.floor(
+                Math.random()*list.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+    heart.style.animationDuration =
+        (3 + Math.random()*3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
+
+}
+
+
+/* =========================
+   GIFT
+========================= */
+
+function openGift(){
+
+    const message =
+        document.getElementById(
+            "finalMessage"
+        );
+
+    message.classList.add("show");
+
+    createConfetti();
+
+    for(let i=0;i<40;i++){
+
+        setTimeout(
+            createHeart,
+            i*70
+        );
+
+    }
+
+}
+
+
+/* =========================
+   CONTINUOUS HEARTS
+========================= */
+
+setInterval(
+    createHeart,
+    1800
+);
+
+</script>
+
+</body>
+</html>
+```
